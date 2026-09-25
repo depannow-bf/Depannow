@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b5cff"><meta name="description" content="DepanNow - trouvez rapidement un mécanicien, électricien, plombier ou autre professionnel.">
+<link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/style.css">
+<title>DepanNow — Dépannage rapide</title>
+</head>
+<body>
+<header><div class="brand">🔧 DepanNow</div><nav><button onclick="showHome()">Accueil</button><button onclick="showPros()">Professionnels</button><button onclick="showRequests()">Mes demandes</button><button id="authBtn" onclick="openAuth()">Connexion</button></nav></header>
+<main>
+<section id="home" class="hero">
+  <div><span class="badge">Dépannage rapide</span><h1>Un problème ?<br><strong>Trouvez un professionnel.</strong></h1><p>Mécanicien, électricien, plombier, climatisation et autres services.</p>
+  <div class="searchbox"><input id="search" placeholder="Ex. mécanicien, Ouaga 2000..."><button onclick="searchPros()">Rechercher</button></div></div>
+</section>
+<section class="section"><h2>Choisir un service</h2><div class="chips" id="chips"></div></section>
+<section class="section"><div class="row"><h2>Professionnels disponibles</h2><button class="link" onclick="showPros()">Voir tout</button></div><div id="pros" class="grid"></div></section>
+<section class="section info"><h2>Comment ça marche ?</h2><div class="steps"><div><b>1</b><h3>Choisis</h3><p>Recherche un métier ou une zone.</p></div><div><b>2</b><h3>Contacte</h3><p>Appelle directement le professionnel.</p></div><div><b>3</b><h3>Demande</h3><p>Décris ton problème et ton lieu.</p></div></div></section>
+<section id="requests" class="section hidden"><h2>Mes demandes</h2><div id="requestList"></div></section>
+<section id="allPros" class="section hidden"><div class="row"><h2>Professionnels</h2><button class="link" onclick="showHome()">Retour</button></div><div class="filters"><input id="q" placeholder="Métier, nom ou quartier"><select id="serviceFilter"><option>Tous</option><option>Mécanicien</option><option>Électricienne</option><option>Plombier</option><option>Climatisation</option><option>Autre</option></select><input id="districtFilter" placeholder="Quartier"><button onclick="loadAllPros()">Filtrer</button></div><div id="allProsGrid" class="grid"></div></section>
+</main>
+<div id="modal" class="modal hidden"><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+<footer>© 2026 DepanNow — Plateforme de dépannage</footer>
+<script src="/app.js"></script>
+</body></html>

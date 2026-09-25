@@ -1,0 +1,9 @@
+{
+  "name":"DepanNow",
+  "short_name":"DepanNow",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#f6f8fc",
+  "theme_color":"#0b5cff",
+  "icons":[]
+}
